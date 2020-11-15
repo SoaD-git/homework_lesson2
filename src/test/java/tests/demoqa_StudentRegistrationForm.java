@@ -3,8 +3,9 @@ package tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.value;
+import javax.swing.*;
+
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -86,4 +87,16 @@ public class demoqa_StudentRegistrationForm {
 
     }
 
+    @Test
+    void negativeRequiredFieldFirstNameStudentRegistrationFormTest() {
+
+        open("https://demoqa.com/automation-practice-form");
+
+        $("#lastName").scrollTo().val(lastName);
+        $("#userNumber").scrollTo().val(mobile);
+        $("#genterWrapper").$(byText("Female")).click();
+        $("#submit").scrollTo().click();
+
+        $("#firstName").shouldHave(cssValue("border-color", "rgb(220, 53, 69)"));
+    }
 }
