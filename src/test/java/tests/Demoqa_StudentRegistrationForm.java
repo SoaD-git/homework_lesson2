@@ -1,15 +1,12 @@
 package tests;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import javax.swing.*;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class demoqa_StudentRegistrationForm {
+public class Demoqa_StudentRegistrationForm {
 
     String  firstName = "dmitriy",
             lastName = "lupachev",
@@ -98,5 +95,6 @@ public class demoqa_StudentRegistrationForm {
         $("#submit").scrollTo().click();
 
         $("#firstName").shouldHave(cssValue("border-color", "rgb(220, 53, 69)"));
+//        $("#firstName").shouldHave(cssClass("form-control:invalid"));
     }
 }

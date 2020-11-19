@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class demoqa_Textbox {
+public class Demoqa_Textbox {
 
     @Test
     void positiveTextBoxTest() {
