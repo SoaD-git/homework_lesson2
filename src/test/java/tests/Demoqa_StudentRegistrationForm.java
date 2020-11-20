@@ -56,7 +56,7 @@ public class Demoqa_StudentRegistrationForm {
 
         $("#uploadPicture").uploadFromClasspath(picture);
 
-        $("#currentAddress").scrollTo().val(currentAddress);
+        $("#currentAddress").val(currentAddress);
         $("#state").scrollTo().click();
         $("#stateCity-wrapper").$(byText(state)).click();
         $("#city").scrollTo().click();
